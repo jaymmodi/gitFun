@@ -1,6 +1,7 @@
 println "This is git fun with groovy."
 
-def list = ["abc","def"]
-assert list.size() == 2
+def list = ["abc","def", "a"]
+assert list.size() == 3
 
-
+println list.sort()
+assert list == ["a", "abc","def"]
