@@ -17,6 +17,11 @@ def map = [
 	Max : 33
 ]
 
+// keys in maps should not be Gstrings -- example
+def key = "jay";
+map.put("${key.toUpperCase()}",26)
+
+assert map.get('JAY') == null
 
 map.each { entry ->
 	println "Name: $entry.key ==> Age: $entry.value"
